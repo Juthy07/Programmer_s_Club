@@ -1,0 +1,27 @@
+
+<!--Calculate distance travelled using the formula - d = u*t+a*t^2 . -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Distance Travelled</h1>
+        <h3>Enter the value below :</h3>
+        <h5>1. Initial Velocity(m/s) (u) : <input type="number" id="u"></h5> <!--input type changed from text to number-->
+        <h5>2. Acceleration (a) : <input type="number" id="a"></h5> <!--input type changed from text to number-->
+        <h5>3. Time(in sec) (t): <input type="number" id="t"></h5> <!--input type changed from text to number-->
+        <button type="submit" name="find" onclick="DistanceTravelled()">Find</button>
+        <p id="distance_travelled"> </p> <!--id changed from dist to distance_travelled-->
+        <script>
+            function DistanceTravelled() {  //function name changed from distance() to Distance_Travelled()
+                let u = parseInt(document.getElementById("u").value); //input values converted to integer values using parseInt().
+                let a = parseInt(document.getElementById("a").value); //input values converted to integer values using parseInt().
+                let t = parseInt(document.getElementById("t").value); //input values converted to integer values using parseInt().
+                let d = u*t+a*Math.pow(t, 2); //used Math.pow() to find t^2. 
+                //console.log(u*t);
+               // console.log(a*t);
+                //console.log(Math.pow(t, 2));
+                document.getElementById("distance_travelled").innerText = "Total Distance travelled : "+d + "m/s." ;
+            }
+        </script>
+    </body>
+</html>

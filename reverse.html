@@ -1,0 +1,33 @@
+
+<!--Find the reverse of the input value-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Reverse of a Number</h1>
+        <h3>Enter the numbers :  <input type="text" id="num"> </h3>
+        <br>
+        <button type="submit" name="reverse" onclick="ReverseNum()">Reverse</button>
+        <h3 id="result" > </h3>
+        <script>
+            function ReverseNum() {
+                 number1 = document.getElementById("num").value;
+                var number = number1;
+                var difference = 0;
+                var reverse = 0;
+                console.log("n: " + number + "d: " + difference+ "r: " + reverse);
+               while(number1 > 0) {
+                   difference = number1%10;
+                   console.log("difference : " + difference);
+                   reverse = (reverse*10)+difference;
+                   console.log("reverse : " + reverse);
+                    number1 = (number1/10);
+                    number1 = (""+number1).split(".")[0];
+                    console.log("number : " + number1);
+               }
+
+               document.getElementById("result").innerText = "Reverse of " + number + " is " + reverse;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+
+<!--To find the factorial of the input value-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Factorial</h1>
+        <h3>Enter the numbers :  <input type="number" id="input_num"> </h3> <!--input type changed from text to number. id changed from num to input_num-->
+        <br>
+        <button type="submit" name="find" onclick="Factorial()">Find</button>
+        <h3 id="result" > </h3>
+        <script>
+            function Factorial() {
+                let f=1;
+                let input_num = document.getElementById("input_num").value; //let num changed to input_num
+                for(let i=1; i<=input_num; i++) {
+                 f = f*i;
+                 console.log(f);
+                }
+                document.getElementById("result").innerHTML = "Factorial is: " + f;
+            }
+        </script>
+    </body>
+</html>

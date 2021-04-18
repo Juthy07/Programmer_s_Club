@@ -1,0 +1,44 @@
+
+<!--Take any values from 1 to 7 and show the corresponding day.-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Days</h1>
+        <h3>Enter the number (1 to 7) : <input type="number" id="input_day_num"> </h3> <!--input type changed from text to number. id changed from num to input_day_num-->
+        <br>
+        <button type="submit" name="show" onclick="DisplayDay()">Show</button>
+        <h3 id="this_day" > </h3> <!--id changed from days to this_day-->
+        <script>
+            function DisplayDay() {
+                let input_day_num = document.getElementById("input_day_num").value;
+                let day = "";
+                if(input_day_num == 1) {
+                    day = "Monday!";
+                }
+                else if(input_day_num == 2) {
+                    day = "Tuesday!";
+                }
+                else if(input_day_num == 3) {
+                    day = "Wednesday!";
+                }
+                else if(input_day_num == 4) {
+                    day = "Thursday!";
+                }
+                else if(input_day_num == 5) {
+                    day = "Friday!";
+                }   
+                else if(input_day_num == 6) {
+                    day = "Saturday!";
+                }
+                else if (input_day_num == 7){
+                    day = "Sunday!";
+                }
+                else{
+                    day = "Invalid! Enter values 1-7 only." //added "Enter values 1-7 only."
+                }
+                document.getElementById("this_day").innerText = "The day is "+day;
+            }
+        </script>
+    </body>
+</html>

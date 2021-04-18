@@ -1,0 +1,30 @@
+
+<!--Generate the Fibonacci Series-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Fibonacci Series</h1>
+        <h3>Enter the numbers :  <input type="number" id="input_num"> </h3>
+        <br>
+        <button type="submit" name="find" onclick="Fibo()">Find</button>
+        <h3 id="result" > </h3>
+        <script>
+            function Fibo() {
+                let number = document.getElementById("input_num").value;
+                let t1 = 0, t2=1, t;
+                let temp = [];
+                for(let i=0; i<=number; i++) {
+                    t = t1+t2;
+                    console.log("t: "+ t);
+                    temp.push(t);
+                    t1 = t2;
+                    console.log("t1: "+ t1);
+                    t2 = t;
+                    console.log("t2 : "+t2);
+                }
+                document.getElementById("result").innerHTML = temp;
+            }
+        </script>
+    </body>
+</html>

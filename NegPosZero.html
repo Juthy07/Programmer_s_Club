@@ -1,0 +1,26 @@
+
+<!--Check if the input value is "Zero", "Positive" or "Negative"-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Integer Check</h1>
+        <h3>Enter the value : <input type="text" id="value"></h3>
+        <button type="submit" name="check" onclick="IntCheck()">Check</button>
+        <p id="int"> </p>
+        <script>
+            function IntCheck() {
+                let value = document.getElementById("value").value;
+                if(value == 0) {
+                    document.getElementById("int").innerText = "It's a Zero!" ;
+                }
+                else if(value >= 0) {
+                    document.getElementById("int").innerText = value + " is a Positive Integer." ;
+                }
+                else if(value <= 0) {
+                    document.getElementById("int").innerText = value + " is a Negative Integer." ;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+<!--Calculate Students marks and show if they have Passed or Failed-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Student Exam Report</h1>
+        <h3>Enter the marks below (out of 30): </h3>
+        <h5>1. English : <input type="number" id="eng"></h5> <!--input type changed from text to number-->
+        <h5>2. Hindi : <input type="number" id="hindi"></h5> <!--input type changed from text to number-->
+        <h5>3. Maths : <input type="number" id="maths"></h5> <!--input type changed from text to number-->
+        <h5>4. Science <input type="number" id="sci"></h5> <!--input type changed from text to number-->
+        <br>
+        <button type="submit" name="submit" onclick="CalculateMarks()">Submit</button>
+        <h2>Total Marks : <p id="totalmark"></p> </h2>
+        <h2 id="result"> </h2>
+        <script>
+            function CalculateMarks() { //function name changed from CheckMarks() to CalculateMarks().
+                let total = 0;
+                let eng = parseInt(document.getElementById("eng").value); //let e changed to eng.
+                let hindi = parseInt(document.getElementById("hindi").value); //let h changed to hindi.
+                let maths = parseInt(document.getElementById("maths").value); //let  changed to maths.
+                let sci = parseInt(document.getElementById("sci").value); //let s changed to sci. 
+                if(eng<0 || eng>30)//
+                    {
+                        window.alert("Enter values between 0-30");
+                    }
+                total = eng+hindi+maths+sci;
+                
+                document.getElementById("totalmark").innerText = total;
+                if(total < 36) {
+                    document.getElementById("result").innerHTML = "Failed!";
+                }
+                else if(total >= 36) {
+                    document.getElementById("result").innerHTML = "Passed!";
+                }
+            }
+        </script>
+    </body>
+</html>

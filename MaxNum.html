@@ -1,0 +1,35 @@
+
+<!--Find the Max value from the 3 input values-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Find the Max number</h1>
+        <h3>Enter the numbers below: </h3>
+        <h5>Number 1 : <input type="text" id="num1"></h5>
+        <h5>Number 2 : <input type="text" id="num2"></h5>
+        <h5>Number 3 : <input type="text" id="num3"></h5>
+        <br>
+        <button type="submit" name="find" onclick="FindMax()">Find</button>
+        <h2>Max Number is :  <p id="max"></p> </h2>
+        <h2 id="result" > </h2>
+        <script>
+            function FindMax() {
+                let num1 = document.getElementById("num1").value;
+                let num2 = document.getElementById("num2").value;
+                let num3 = document.getElementById("num3").value;
+                let maximum = 0;
+                if(num1>num2 && num1>num3) {
+                     maximum = num1;
+                }
+                else if(num2>num1 && num2>num3) {
+                     maximum = num2;
+                }
+                else if(num3>num1 && num3>num2) {
+                    maximum = num3;
+                }
+                document.getElementById("max").innerText = maximum ;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Temperature Converter</h1>
+        <h3>Enter value in centigrade : <input id= "c"type="text" name="c"><br></h3>
+        <button type="submit" name="convert" onclick="tempconv()">Convert</button>
+        <p id="fh"> </p>
+        <script>
+            function tempconv() {
+                let c = document.getElementById("c").value;
+                let f = 1.8*c+32;
+                document.getElementById("fh").innerText = "Temperature in Fahrenheit : "+f + "F." ;
+            }
+        </script>
+    </body>
+</html>
